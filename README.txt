@@ -1,4 +1,4 @@
-apt-get install ldap-utils 
+apt-get install ldap-utils perl
 
 In configuration file:
 
