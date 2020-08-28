@@ -51,11 +51,11 @@ usuariolowercase=`echo $uid | tr '[A-Z]' '[a-z]'`
 
 if [ $usuariolowercase != $common_name ]; then
    echo "ACCESS DENIED - CERTIFICATE ISSUE username=$usuariolowercase cert=$common_name"
-   echo "$(date +%Y%m%d-%H%M%S) DENIED  username=$usuariolowercase cert=$common_name" >> /var/log/openvpn/openvpn-access-tme.log
+   echo "$(date +%Y%m%d-%H%M%S) DENIED  username=$usuariolowercase cert=$common_name" >> /var/log/openvpn/openvpn-access-example.log
    exit 1
 fi
 echo "ACCESS GRANTED - CERTIFICATE OK - username=$usuariolowercase cert=$common_name"
-echo "$(date +%Y%m%d-%H%M%S) GRANTED username=$usuariolowercase cert=$common_name" >> /var/log/openvpn/openvpn-access-tme.log
+echo "$(date +%Y%m%d-%H%M%S) GRANTED username=$usuariolowercase cert=$common_name" >> /var/log/openvpn/openvpn-access-example.log
 
 #
 # Check if the user have accents on namo or second names, compare entire string encode on base64.
